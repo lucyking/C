@@ -17,7 +17,7 @@ int main(){
 	int i,j,**p,*a,*b;
 	double k=1.234;
 	i=101,j=202;
-	p=malloc(1000);
+	p=malloc(1000); //no malloc may cause >SIGSEGV< error 
 	p[0]=&j;
 	p[1]=&i;
 	a=&i;
