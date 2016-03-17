@@ -57,6 +57,24 @@ int main() {
     cout << i << endl << myVector[5];
 
 
+//    map<string,int> mapString_int;
+//    mapString_int.insert(pair<string,int>("alpha", 1));
+//    mapString_int.insert(map<string,int>)
+
+    cout<<"\nMap start"<<endl;
+    map<int,int> m1;
+    m1.insert({1,13});
+    cout<<m1[1]<<"\n";
+
+    m1.insert(make_pair(2,20));
+    cout << m1[2]<<"\n";
+
+    m1.insert(m1.end(),make_pair(3,33));
+    cout << m1[3];
+
+    map<int,string> m3;
+
+
 
 
 
