@@ -46,13 +46,21 @@ int main() {
     vt = myVector.end();
     int i;
     for(i=0;i!=10;++i){
-        myVector.insert(vt,i);
+        myVector.insert(vt,33);
         vt=myVector.end();
     }
+
+    cout <<"sum of 33" << endl<< myVector.size()<<endl;
 
 //    myVector.insert(vt,1);
 
     cout << i << endl << myVector[5];
+
+
+
+
+
+
 
 
 
