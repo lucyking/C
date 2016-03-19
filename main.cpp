@@ -3,6 +3,7 @@
 #include <map>
 #include <set>
 #include <vector>
+#include <stdio.h>
 
 using namespace std;
 
@@ -10,6 +11,14 @@ int fx(int & a){
     cin >> a;
     return a+1;
 }
+
+template <class T>
+//T xchg(T const &x, T const &y){  // 引用为常量 在该函数内不可变
+T xchg(T  &x, T  &y){
+    T t = x;
+    x=y;
+    y=t;
+};
 
 int main() {
     string usr;
@@ -26,6 +35,7 @@ int main() {
 
     cout << yourkids[11] << endl;
     cout << endl;
+    cout << yourkids[888];
 
 
     set<int> mySet;
@@ -35,6 +45,7 @@ int main() {
     mySet.insert(2);
     mySet.insert(3);
     mySet.insert(8);
+    mySet.insert(4);
 
     set<int>::iterator it;
     for(it= mySet.begin(); it != mySet.end(); it++)
@@ -71,8 +82,35 @@ int main() {
 
     m1.insert(m1.end(),make_pair(3,33));
     cout << m1[3];
+    cout <<endl;
+
+    map<int,int>::iterator mt;
+    mt = m1.begin();
+
+    cout <<"mt->first"<<endl;
+    cout << mt->first<<endl;
+    cout <<"mt->second"<<endl;
+    cout << mt->second<<endl;
+
+    mt=++mt;
+    cout <<"mt->first"<<endl;
+    cout << mt->first<<endl;
+    cout <<"mt->second"<<endl;
+    cout << mt->second<<endl;
+
+
 
     map<int,string> m3;
+
+
+
+    int a=1,b=2;
+    cout<<a<<endl;
+    cout<<b<<endl;
+    xchg(a,b);
+    cout<<a<<endl;
+    cout<<b<<endl;
+
 
 
 
