@@ -36,6 +36,7 @@ int main() {
     cout << yourkids[11] << endl;
     cout << endl;
     cout << yourkids[888];
+    cout << endl;
 
 
     set<int> mySet;
@@ -47,9 +48,12 @@ int main() {
     mySet.insert(8);
     mySet.insert(4);
 
+    cout << "set<>:" << endl;
     set<int>::iterator it;
     for(it= mySet.begin(); it != mySet.end(); it++)
         cout<<*it<<endl;
+    cout << "set<> sorted by itself" << endl;
+    cout << endl;
 
     vector<int> myVector;
     vector<int>::iterator vt;
