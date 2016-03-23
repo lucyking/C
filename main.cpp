@@ -20,6 +20,9 @@ T xchg(T  &x, T  &y){
     y=t;
 };
 
+typedef std::map<int,std::set<int> >    Graph;
+
+
 int main() {
     string usr;
 //    set<int>;
@@ -114,6 +117,41 @@ int main() {
     xchg(a,b);
     cout<<a<<endl;
     cout<<b<<endl;
+
+/*------------Graph Start----------------*/
+
+    cout <<"Graph Srart\n";
+    Graph graph;
+    //map<int,set<int,int> >::const_iterator iGraph;
+    graph[0].insert(10);
+    graph[0].insert(20);
+    graph[1].insert(11);
+    graph[1].insert(21);
+    Graph::const_iterator iter = graph.begin();
+    const std::set<int> & iSet = iter->second;
+    //iGraph = graph.begin();
+
+    a = iter->first;
+    //iSet = iter->second;
+    //cout<<iter->second;
+    for(std::set<int>::const_iterator iterInner = iSet.begin(); iterInner != iSet.end(); ++iterInner) {
+	    int v = *iterInner;
+	    cout << v << endl; 
+    }
+
+    iter=++iter;
+    const std::set<int> & iSet2 = iter->second;
+    for(std::set<int>::const_iterator iterInner = iSet2.begin(); iterInner != iSet2.end(); ++iterInner) {
+	    int v = *iterInner;
+	    cout << v << endl; 
+    }
+
+
+    //cout << iSet[0];
+    //cout << iSet[1];
+    //iSet++;
+    //cout << iSet[0];
+    //cout << iSet[1];
 
 
 
