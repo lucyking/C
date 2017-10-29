@@ -1,0 +1,1 @@
+/usr/bin/c++.exe -g  -Wl,--enable-auto-import CMakeFiles/point.dir/main.cpp.o  -o point.exe -Wl,--out-implib,libpoint.dll.a -Wl,--major-image-version,0,--minor-image-version,0 
